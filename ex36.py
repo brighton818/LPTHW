@@ -17,8 +17,7 @@ Hope to see you in Mamamoo Company."""
         Solar()
     elif choice == 3:
         WheeIn()
-    else:
-        print "Oh! Are you leaving? Hope to see you next time!"
+
 
 def restroom():
     print "You can rest here and calm yourself first."
@@ -91,15 +90,38 @@ def singing():
     if choice == "K-Pop":
         print "I do not prefer that genre. I'm sorry even though you feel me as a Nazi."
         print "Hope you have a good day"
-        exit.(0)
+        exit(0)
 
     if choice == "Pop":
         print "Your singing was good. However, I think you should practice more as a trainee."
         print "We can support you for an year and you will become a singer."
+        exit(0)
 
     if choice == "Jazz":
         print "You were amazing!!!"
         print "You will be a singer right away. Congratulations!"
+        exit(0)
 
-def performing()
+def performing():
+    print "What are you going to perform?"
+    print "Please show the performance."
+    print "Options are\n-Break-dancing\n-Ballet\n-Poppin"
+
+    choice = raw_input("> ")
+
+    if choice == "Break-dancing":
+        print "Excellent! I love your dance moves.\nYou can be a professional dancer right away."
+        exit(0)
+
+    if choice == "Ballet":
+        print "I do not like your moves. I'm sorry but you are disqualified\nHope you have a good day."
+        exit(0)
+
+    if choice == "Poppin":
+        print "Your dance moves were okay. However, I think you need some more practice as a trainee."
+        print "We will support you from an year and you will become a professional dancer."
 start()
+restroom()
+Solar()
+WheeIn()
+CEO()
