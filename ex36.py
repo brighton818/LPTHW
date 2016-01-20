@@ -1,83 +1,46 @@
 # This is an adventure to be in Mamamoo Company
 from time import sleep
+from sys import exit
 
-def start():
-    print """You are an applicant to Mamamoo Company.
-You have to get in by showing your skills of singing and performing.
-Hope to see you in Mamamoo Company."""
-    print "Which way will you go?"
-    print "1.Left\n2.Straight\n3.Right."
-    sleep(1)
-
-    choice = raw_input("> ")
-
-    if choice == 1:
-        restroom()
-    elif choice == 2:
-        Solar()
-    elif choice == 3:
-        WheeIn()
-
-
-def restroom():
-    print "You can rest here and calm yourself first."
-    print "Are you done resting?"
-    print "Yes\nNo"
-    sleep(1)
-
-    choice = raw_input("> ")
-
-    if choice == "Yes":
-        start()
-    elif choice == "No":
-        restroom()
-    else:
-        print "You have slipped and got a stroke."
 
 def Solar():
-    print "You can get a tutor from Solar.\n You can improve your singing skills.\nHowever, if you do not want any tutor,\n you can audition right now or get a lesson from WheenIn for performance. "
-    print "What would you like to do?"
-    print "1.Get tutor by Solar\n2.Audition\n3.Get tutor from WheeIn"
+    print "You got a lesson from Solar. Your singing skills improved very much!"
+    print "What would you do next?"
+    print "Audition\nGet tutor from WheeIn"
     sleep(1)
 
 # Should add a while statement here!!!!!!!!!!!!!!!!!!!!!!!!!!!
     choice = raw_input("> ")
 
-    if choice == 1:
-        print "Your singing skills got much better! Good luck on your audition!"
-    elif choice == 2:
+    if choice == "Audition":
         CEO()
-    elif choice == 3:
+    elif choice == "Get tutor from WheeIn":
         WheeIn()
 
 def WheeIn():
-    print """You can get a lesson from WheeIn. You can improve your performance skills.
-However, if you do not want any lessons,
-you can audition in CEO's room right now or get a lesson from Solar to improve singing skills."""
-    print "What would you like to do?"
-    print "1.Get lessons from WheeIn\n2.Auditoin\n3.Get lessons from Solar"
+    print """You got a lesson from WheeIn. Your performance skills improved a lot!."""
+    print "What would you like to do next?"
+    print "Audition\nGet lessons from Solar"
     sleep(1)
 
 # Here also should add a while statement!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    choice = raw_input("> ")
+    performance= raw_input("> ")
 
-    if choice == 1:
-        print "Your performing skills got much better! Good luck on your audition!"
-    elif choice ==2:
+    if performance == "Audition":
         CEO()
-    elif choice == 3:
+    elif performance == "Get lessons from Solar":
         Solar()
 
 def CEO():
     print "Welcome to Mamamoo Company's audition! I specifically have genres that I like, so I hope you can choose a good one!"
     print "Are you going to apply as singing or performing?"
 
-    choice = raw_input("> ")
+    audition = raw_input("> ")
 
-    if choice == "singing":
+    if audition== "singing":
         singing()
 
-    if choice == "performing":
+    if audition == "performing":
         performing()
 
 def singing():
@@ -85,19 +48,19 @@ def singing():
     print "Please sing the song."
     print "Options are\n-K-Pop\n-Pop\n-Jazz"
 
-    choice = raw_input("> ")
+    songs = raw_input("> ")
 
-    if choice == "K-Pop":
+    if songs == "K-Pop":
         print "I do not prefer that genre. I'm sorry even though you feel me as a Nazi."
         print "Hope you have a good day"
         exit(0)
 
-    if choice == "Pop":
+    if songs == "Pop":
         print "Your singing was good. However, I think you should practice more as a trainee."
         print "We can support you for an year and you will become a singer."
         exit(0)
 
-    if choice == "Jazz":
+    if songs == "Jazz":
         print "You were amazing!!!"
         print "You will be a singer right away. Congratulations!"
         exit(0)
@@ -107,21 +70,34 @@ def performing():
     print "Please show the performance."
     print "Options are\n-Break-dancing\n-Ballet\n-Poppin"
 
-    choice = raw_input("> ")
+    perform = raw_input("> ")
 
-    if choice == "Break-dancing":
+    if perform == "Break-dancing":
         print "Excellent! I love your dance moves.\nYou can be a professional dancer right away."
         exit(0)
 
-    if choice == "Ballet":
+    if perform == "Ballet":
         print "I do not like your moves. I'm sorry but you are disqualified\nHope you have a good day."
         exit(0)
 
-    if choice == "Poppin":
+    if perform == "Poppin":
         print "Your dance moves were okay. However, I think you need some more practice as a trainee."
         print "We will support you from an year and you will become a professional dancer."
+
+def start():
+    print """You are an applicant to Mamamoo Company.
+You have to get in by showing your skills of singing and performing.
+Hope to see you in Mamamoo Company."""
+    print "Which way will you go?"
+    print "You can go straight or right."
+    sleep(1)
+
+    way = raw_input("> ")
+
+    if way == "straight":
+        Solar()
+    elif way == "right":
+        WheeIn()
+
+
 start()
-restroom()
-Solar()
-WheeIn()
-CEO()
