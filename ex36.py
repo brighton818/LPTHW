@@ -9,7 +9,6 @@ def Solar():
     print "Audition\nGet tutor from WheeIn"
     sleep(1)
 
-# Should add a while statement here!!!!!!!!!!!!!!!!!!!!!!!!!!!
     choice = raw_input("> ")
 
     if choice == "Audition":
@@ -23,7 +22,6 @@ def WheeIn():
     print "Audition\nGet lessons from Solar"
     sleep(1)
 
-# Here also should add a while statement!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     performance= raw_input("> ")
 
     if performance == "Audition":
