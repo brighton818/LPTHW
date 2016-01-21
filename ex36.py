@@ -40,7 +40,7 @@ def CEO():
     if audition== "singing":
         singing()
 
-    if audition == "performing":
+    elif audition == "performing":
         performing()
 
 def singing():
@@ -55,12 +55,12 @@ def singing():
         print "Hope you have a good day"
         exit(0)
 
-    if songs == "Pop":
+    elif songs == "Pop":
         print "Your singing was good. However, I think you should practice more as a trainee."
         print "We can support you for an year and you will become a singer."
         exit(0)
 
-    if songs == "Jazz":
+    elif songs == "Jazz":
         print "You were amazing!!!"
         print "You will be a singer right away. Congratulations!"
         exit(0)
@@ -76,11 +76,11 @@ def performing():
         print "Excellent! I love your dance moves.\nYou can be a professional dancer right away."
         exit(0)
 
-    if perform == "Ballet":
+    elif perform == "Ballet":
         print "I do not like your moves. I'm sorry but you are disqualified\nHope you have a good day."
         exit(0)
 
-    if perform == "Poppin":
+    elif perform == "Poppin":
         print "Your dance moves were okay. However, I think you need some more practice as a trainee."
         print "We will support you from an year and you will become a professional dancer."
 
