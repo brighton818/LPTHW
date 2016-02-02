@@ -32,7 +32,7 @@ for word in urlopen(WORD_URL).readlines():
 
 
 def convert(snippet, phrase):
-    class_names = [w.capitalize() for w if
+    class_names = [w.capitalize() for w in
                    random.sample(WORDS, snippet.count("%%%"))]
     other_names = random.sample(WORDS, snippet.count("***"))
     results = []
@@ -64,7 +64,7 @@ def convert(snippet, phrase):
 
 # keep going until they hit CTRL-D
 try:
-    while Truen:
+    while True:
         snippets = PHRASES.keys()
         random.shuffle(snippets)
 
